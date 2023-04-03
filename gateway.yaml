@@ -1,0 +1,18 @@
+server:
+  port: 8081
+spring:
+  cloud: 
+   gateway: 
+    routes:
+      - id: 
+        uri: lb://d/
+        predicates:
+          - Path=/d/**
+      - id: cart
+        uri: lb://d/
+        predicates:
+          - Path=/d/**
+      - id: cartCB
+        uri: lb://d/
+        predicates:
+          - Path=/d/**  
