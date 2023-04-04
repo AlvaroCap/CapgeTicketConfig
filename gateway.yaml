@@ -5,9 +5,9 @@ spring:
    gateway: 
     routes:
       - id: 
-        uri: lb://d/
+        uri: lb://event/
         predicates:
-          - Path=/d/**
+          - Path=/event/**
       - id: cart
         uri: lb://d/
         predicates:
