@@ -8,11 +8,4 @@ spring:
           uri: lb://event/
           predicates:
             - Path=/event/**
-        - id: user
-        uri: lb://user/
-        predicates:
-            - Path=/user/**
-        - id: buy
-        uri: lb://buy/
-        predicates:
-           - Path=/buy/**  
+
