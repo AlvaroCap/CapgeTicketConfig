@@ -2,17 +2,17 @@ server:
   port: 8081
 spring:
   cloud: 
-   gateway: 
-    routes:
-      - id: event
-        uri: lb://events/
-        predicates:
-          - Path=/events/**
-      - id: user
+    gateway: 
+      routes:
+        - id: event
+          uri: lb://events/
+          predicates:
+            - Path=/events/**
+        - id: user
         uri: lb://user/
         predicates:
-          - Path=/user/**
-      - id: buy
+            - Path=/user/**
+        - id: buy
         uri: lb://buy/
         predicates:
-          - Path=/buy/**  
+           - Path=/buy/**  
