@@ -5,9 +5,9 @@ spring:
     gateway: 
       routes:
         - id: event
-          uri: lb://events/
+          uri: lb://event/
           predicates:
-            - Path=/events/**
+            - Path=/event/**
         - id: user
         uri: lb://user/
         predicates:
