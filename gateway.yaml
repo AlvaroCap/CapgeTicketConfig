@@ -2,13 +2,13 @@ server:
   port: 8081
 spring:
   cloud: 
-   gateway:
-    globalcors:
-     corsConfigurations:
-      '[/**]':
-        allowedOrigins: '*'
-        allowedHeaders: '*'
-        allowedMethods: GET, POST, DELETE, PUT
+    gateway:
+     globalcors:
+      corsConfigurations:
+        '[/**]':
+          allowedOrigins: '*'
+          allowedHeaders: '*'
+          allowedMethods: GET, POST, DELETE, PUT
     routes:
       - id: event
         uri: lb://event/
