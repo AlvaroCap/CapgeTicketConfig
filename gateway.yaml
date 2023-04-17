@@ -8,7 +8,7 @@ spring:
       '[/**]':
         allowedOrigins: '*'
         allowedHeaders: '*'
-         allowedMethods: GET, POST, DELETE, PUT
+        allowedMethods: GET, POST, DELETE, PUT
     routes:
       - id: event
         uri: lb://event/
