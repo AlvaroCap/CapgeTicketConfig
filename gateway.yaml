@@ -21,4 +21,8 @@ spring:
           '[/**]':
             allowedOrigins: '*'
             allowedHeaders: '*'
-            allowedMethods: GET, POST, DELETE, PUT
+            allowedMethods:
+            - GET
+            - POST
+            - DELETE
+            - PUT
