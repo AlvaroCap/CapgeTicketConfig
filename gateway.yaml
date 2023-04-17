@@ -3,7 +3,7 @@ server:
 spring:
   cloud: 
     gateway:
-    routes:
+      routes:
       - id: event
         uri: lb://event/
         predicates:
