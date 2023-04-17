@@ -17,12 +17,10 @@ spring:
         predicates:
           - Path=/buy/**
       globalcors:
-        corsConfigurations:
-          '[/**]':
-            allowedOrigins: '*'
-            allowedHeaders: '*'
-            allowedMethods:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: "*"
+            allowedHeaders: "*"
+            allowedMethods:
             - GET
             - POST
-            - DELETE
-            - PUT
