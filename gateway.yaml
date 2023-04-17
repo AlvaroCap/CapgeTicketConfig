@@ -3,26 +3,26 @@ server:
 spring:
   cloud: 
    gateway:
-    globalcors:
-      cors-configurations:
-        '[/**]':
-          allowedOrigins: '*'
-          allowedHeaders: '*'
-          allowedMethods: 
-            - GET
-            - POST
-            - PUT
-            - DELETE
-    routes:
-      - id: event
-        uri: lb://event/
-        predicates:
-          - Path=/event/**
-      - id: user
-        uri: lb://user/
-        predicates:
-          - Path=/user/**
-      - id: buy
-        uri: lb://buy/
-        predicates:
-          - Path=/buy/**
+     globalcors:
+       corsConfigurations:
+         '[/**]':
+           allowedOrigins: '*'
+           allowedHeaders: '*'
+           allowedMethods: 
+           - GET
+           - POST
+           - PUT
+           - DELETE
+     routes:
+       - id: event
+         uri: lb://event/
+         predicates:
+           - Path=/event/**
+       - id: user
+         uri: lb://user/
+         predicates:
+           - Path=/user/**
+       - id: buy
+         uri: lb://buy/
+         predicates:
+           - Path=/buy/**
