@@ -2,7 +2,17 @@ server:
   port: 8081
 spring:
   cloud: 
-   gateway: 
+   gateway:
+    globalcors:
+      corsConfigurations:
+        '[/**]':
+          allowedOrigins: '*'
+          allowedHeaders: '*'
+          allowedMethods: 
+            - GET
+            - POST
+            - PUT
+            - DELETE
     routes:
       - id: event
         uri: lb://event/
@@ -16,13 +26,3 @@ spring:
         uri: lb://buy/
         predicates:
           - Path=/buy/**
-    globalcors:
-      corsConfigurations:
-        '[/**]':
-          allowedOrigins: '*'
-          allowedHeaders: '*'
-          allowedMethods: 
-            - GET
-            - POST
-            - PUT
-            - DELETE
